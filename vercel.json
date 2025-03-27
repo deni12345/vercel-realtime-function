@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "api/*.go",
+            "use": "@vercel/go"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/collection/sub",
+            "dest": "/api/collection-sub.go",
+            "methods": ["GET"] 
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/index.go",
+            "methods": ["GET"] 
+        }
+    ]
+}
