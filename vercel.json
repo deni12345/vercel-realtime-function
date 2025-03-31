@@ -1,21 +1,21 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "api/*.go",
-            "use": "@vercel/go"
+    "regions": ["sin1"],
+    "functions": {
+        "api/*.go": {
+            "maxDuration": 60
         }
-    ],
+    },
     "routes": [
         {
-            "src": "/api/collection/sub",
-            "dest": "/api/collection-sub.go",
-            "methods": ["GET"] 
+            "src": "/api/sub/doc",
+            "dest": "/api/doc-sub.go",
+            "methods": ["GET"]
         },
         {
             "src": "/api/(.*)",
             "dest": "/api/index.go",
-            "methods": ["GET"] 
+            "methods": ["GET"]
         }
     ]
 }
