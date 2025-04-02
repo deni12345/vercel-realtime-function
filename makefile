@@ -9,3 +9,8 @@ run:
 test: 
 	@echo "Running go tests..."
 	go test ./... -v
+
+pre_commit:
+	@echo "Running pre-commit hooks..."
+	golangci-lint run --fix
+	@echo "Pre-commit hooks completed."
