@@ -12,8 +12,8 @@ type User struct {
 	LastLogin    time.Time `firestore:"lastLogin"`
 }
 
-func NewUser(name, email, hashPassword, phone, photoURL string) *User {
-	return &User{
+func NewUser(name, email, hashPassword, phone, photoURL string) User {
+	return User{
 		Email:        email,
 		Username:     name,
 		HashPassword: hashPassword,

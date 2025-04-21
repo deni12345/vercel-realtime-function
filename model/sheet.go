@@ -15,8 +15,8 @@ type Sheet struct {
 	CreatedAt time.Time              `firestore:"createdAt"`
 }
 
-func NewSheet(title, status string, menu Menu, createdBy *firestore.DocumentRef) *Sheet {
-	return &Sheet{
+func NewSheet(title, status string, menu Menu, createdBy *firestore.DocumentRef) Sheet {
+	return Sheet{
 		Title:     title,
 		CreatedBy: createdBy,
 		CreatedAt: time.Now(),

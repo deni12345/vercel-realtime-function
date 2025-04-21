@@ -1,23 +1,18 @@
 package dao
 
-import (
-	"context"
-	"log"
+// type DAO struct {
+// 	client *firestore.Client
+// }
 
-	"cloud.google.com/go/firestore"
-	"google.golang.org/api/option"
-)
+// func NewDAO() *DAO {
+// 	client, err := firestore.NewClient(
+// 		context.Background(),
+// 		configs.Value.ProjectID,
+// 		option.WithCredentialsJSON(configs.Value.Credential),
+// 	)
 
-// init
-type DAO struct {
-	client *firestore.Client
-}
-
-func NewDAO(projectID string, credential []byte) *DAO {
-
-	client, err := firestore.NewClient(context.Background(), "", option.WithCredentialsJSON(credential))
-	if err != nil {
-		log.Fatalf("Failed to create Firestore client: %v", err)
-	}
-	return &DAO{client: client}
-}
+// 	if err != nil {
+// 		log.Fatalf("Failed to create Firestore client: %v", err)
+// 	}
+// 	return &DAO{client: client}
+// }

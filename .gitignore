@@ -25,4 +25,8 @@ go.work.sum
 .env
 .vercel
 
+#vscode folder
+.vscode
+
+#key crendential
 key

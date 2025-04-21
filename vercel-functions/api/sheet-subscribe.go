@@ -27,7 +27,7 @@ func getCredentials() ([]byte, error) {
 	return decodedCredentials, nil
 }
 
-func CollectionSubHandler(w http.ResponseWriter, r *http.Request) {
+func SheetSubscribeHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	credentials, err := getCredentials()
