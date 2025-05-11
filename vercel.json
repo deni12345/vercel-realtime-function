@@ -2,7 +2,7 @@
     "version": 2,
     "regions": ["sin1"],
     "functions": {
-        "vercel-functions/api/*.go": {
+        "api/*.go": {
             "maxDuration": 60
         }
     },
